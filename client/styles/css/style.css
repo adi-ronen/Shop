@@ -1,0 +1,35 @@
+#KobadiSaurus{
+	background-image: url("../images/jurassic-world.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    overflow-x: hidden;
+    
+}
+#body{
+    font-family: Exo;
+    font-style: black;
+    	background-image: url("../images/jurassic-world.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+         width: 100%;
+         overflow-x: hidden;
+         
+}
+html {
+    min-height: 100%;
+}
+label{
+    margin: 15px;
+    color: white;   
+    text-shadow: 1px 2px 1px #000;
+}
+p{
+    margin: 15px;
+    font-weight: bold;
+    /*text-shadow: 1px 2px 1px rgb(128, 128, 128);*/
+}
