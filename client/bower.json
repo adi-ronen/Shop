@@ -1,0 +1,16 @@
+{
+  "name": "angular-phonecat",
+  "description": "A starter project for AngularJS",
+  "version": "0.0.0",
+  "homepage": "https://github.com/angular/angular-phonecat",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "1.5.x",
+    "angular-animate": "1.5.x",
+    "angular-resource": "1.5.x",
+    "angular-route": "1.5.x",
+    "jquery": "3.2.x",
+    "angular-local-storage": "^0.7.1"
+  }
+}
