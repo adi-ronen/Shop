@@ -268,7 +268,7 @@ return service;
                     $rootScope.loged = service.isLoggedIn = true;
                     user.UserId = service.UserId = response.data.resObject.UserId;
                     $rootScope.isManeger = service.isManeger = response.data.resObject.IsAdmin;
-                    localStorageService.cookie.set("userservice", user);
+                    localStorageService.cookie.set("userservice", service);
                     localStorageService.set("userservice", {"UserId": user.UserId,"UserName":user.UserName})
                     console.log(localStorageService.cookie.get("userservice"));
                 }else{
