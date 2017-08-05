@@ -1,0 +1,14 @@
+.carddemoBasicUsage .card-media {
+  background-color: #999999; 
+}
+u{
+	margin-left: 15px; 
+	cursor:pointer;
+}
+
+.sortorder:after {
+  content: '\25b2';   // BLACK UP-POINTING TRIANGLE
+}
+.sortorder.reverse:after {
+  content: '\25bc';   // BLACK DOWN-POINTING TRIANGLE
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html ng-app="shopApp">
+<head>
+	<title>KobadiSaurus</title>
+	<link rel="stylesheet" href="./styles/css/style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo">
+	<link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+	<link rel="stylesheet" href="./styles/css/font-awesome.min.css">
+	<link rel="stylesheet" href="hot-products/hot-products.css">
+	<link rel="stylesheet" href="new-product/new-product.css">
+	<link rel="stylesheet" href="shopping-cart/shopping-cart.css">
+	<link rel="stylesheet" href="products-list/products-list.css">
+	<link rel="stylesheet" href="product-details/product-details.css">
+	<link rel="stylesheet" href="shopping-cart/shopping-cart.css">
+	<link rel="stylesheet" href="recommended-product/recommended-product.css">
+	<link rel="stylesheet" href="bower_components\bootstrap-3.3.7-dist\css\bootstrap.min.css">
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+	<script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+	<script src="bower_components/angular-aria/angular-aria.min.js"></script>
+	<script src="bower_components/angular-messages/angular-messages.min.js"></script>
+	<script src="bower_components/angular-material/angular-material.js"></script>
+	<script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+	<script src="app.module.js"></script>
+	<script src="app.config.js"></script>
+	<script src="httpService.js"></script>
+	<script src="product-in-list/product-in-list.module.js"></script>
+	<script src="product-in-list/product-in-list.component.js"></script>
+	<script src="hot-products/hot-products.module.js"></script>
+	<script src="hot-products/hot-products.component.js"></script>
+	<script src="products-list/products-list.module.js"></script>
+	<script src="products-list/products-list.component.js"></script>
+	<script src="log-in/log-in.module.js"></script>
+	<script src="log-in/log-in.component.js"></script>
+	<script src="product-details/product-details.module.js"></script>
+	<script src="product-details/product-details.component.js"></script>
+	<script src="register/register.module.js"></script>
+	<script src="register/register.component.js"></script>
+	<script src="new-product/new-product.module.js"></script>
+	<script src="new-product/new-product.component.js"></script>
+	<script src="product-details/product-details.module.js"></script>
+	<script src="product-details/product-details.component.js"></script>
+	<script src="recommended-product/recommended-product.module.js"></script>
+	<script src="recommended-product/recommended-product.component.js"></script>
+	<script src="shopping-cart/shopping-cart.module.js"></script>
+	<script src="shopping-cart/shopping-cart.component.js"></script>
+	<script src="forget-password/forget-password.module.js"></script>
+	<script src="forget-password/forget-password.component.js"></script>
+	<script src="previous-order/previous-order.module.js"></script>
+	<script src="previous-order/previous-order.component.js"></script>
+</head>
+<body id="body">
+<img id="load" src="./styles/images/loading.gif" style="margin-left: 40%;
+    margin-top: 10%;" ng-show="connecting" >
+<div id="KobadiSaurus" ng-init="init()" ng-show="!connecting">
+	<md-content >
+		<md-toolbar class="md-hue-2">
+			<div class="md-toolbar-tools">
+			<img id="icon" src="./styles/images/rex.png" style="height: 60%; margin-bottom: 1%">
+				<h2 flex md-truncate><a href="#!/">KobadiSaurus Land </a></h2>
+				<h2 style="margin-right: 50px;" ng-if="loged">Hello {{UserName}}</h2>
+				<h2 style="margin-right: 50px;" ng-show="!loged">Hello guest</h2>
+				<h2 ng-show="loged">last login: {{LastLogin| date}}</h2>
+				<md-button class="md-icon-button" aria-label="Cart" ng-show="loged" href="#!/shoppingCart">
+					<md-tooltip md-direction="bottom">Shopping Cart</md-tooltip>
+					<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+				</md-button>
+				<md-button class="md-icon-button" aria-label="Sign In" ng-show="!loged" href="#!/login" >
+					<md-tooltip md-direction="bottom">Sign In</md-tooltip>
+					<i class="fa fa-sign-in" aria-hidden="true"></i>
+				</md-button>
+				<md-button class="md-icon-button" aria-label="Log Out" ng-show="loged" href="#!/login" ng-click="logout()">
+					<md-tooltip md-direction="bottom">Log Out</md-tooltip>
+					<i class="fa fa-sign-out" aria-hidden="true"></i>
+				</md-button>
+				<md-button class="md-icon-button" aria-label="Admin Page" ng-show="isManeger" href="#!/admin">
+					<md-tooltip md-direction="bottom">Admin Page</md-tooltip>
+					<i class="fa fa-lock" aria-hidden="true"></i>
+				</md-button> 
+				<md-button class="md-icon-button" aria-label="About" ng-click="showAbout()">
+					<md-tooltip md-direction="bottom">About</md-tooltip>
+					<i class="fa fa-info fa-2" aria-hidden="true"></i>
+				</md-button>
+			</div>
+		</md-toolbar>
+	</md-content>
+	<div ng-view style="margin: 5%;"></div>
+</div>
+</body>
+</html>
